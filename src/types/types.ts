@@ -14,7 +14,7 @@ type Links = {
   download_location: string
 }
 
-type Image = {
+export type ImageType = {
   id: string
   created_at: string
   updated_at: string
@@ -40,4 +40,8 @@ type Image = {
   downloads: number
 }
 
-export default Image
+export type ImageInfo = {
+  url: string
+  description: string | null
+  color: string
+}

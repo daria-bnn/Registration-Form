@@ -1,9 +1,9 @@
-import Image from '../types/types'
+import { ImageType } from '../types/types'
 
 const USER_KEY = ''
 const URL = `https://api.unsplash.com/photos/random?client_id=${USER_KEY}`
 
-const getImage = (): Promise<Image> =>
+const getImage = (): Promise<ImageType> =>
   fetch(URL).then((res) => {
     if (res.ok) {
       return res.json()

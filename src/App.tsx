@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
-import RandomPicture from './components/RandomPicture/RandomPicture'
+import ImageContainer from './components/ImageContainer/ImageContainer'
 
 const App = () => (
   <div className="App">
-    <RandomPicture />
+    <ImageContainer />
   </div>
 )
 
