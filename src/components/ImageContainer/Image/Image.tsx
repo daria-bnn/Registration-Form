@@ -4,6 +4,7 @@ import { FC, useState } from 'react'
 import { ImageInfo } from '../../../types/types'
 
 import './Image.css'
+import ImageLoad from './ImageLoad/ImageLoad'
 
 const cnImage = cn('Image')
 
@@ -14,14 +15,7 @@ const Image: FC<ImageInfo> = ({ url, description, color }) => {
 
   return (
     <div className={cnImage()}>
-      {!isImageLoaded && (
-        <div
-          className={cnImage('Loaded')}
-          style={{ backgroundColor: color }}
-        >
-          Идет загрузка
-        </div>
-      )}
+      {isImageLoaded && <ImageLoad color={color} />}
 
       <div className={cnImage('Media')}>
         <img

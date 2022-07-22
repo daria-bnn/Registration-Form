@@ -1,0 +1,9 @@
+.Icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Icon img {
+  width: 26px;
+}

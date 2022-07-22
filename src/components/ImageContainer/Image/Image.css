@@ -3,13 +3,6 @@
   height: 400px;
 }
 
-.Image-Loaded {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-}
-
 .Image-Media {
   width: 100%;
   height: 100%;
