@@ -15,7 +15,7 @@ const Image: FC<ImageInfo> = ({ url, description, color }) => {
 
   return (
     <div className={cnImage()}>
-      {isImageLoaded && <ImageLoad color={color} />}
+      {!isImageLoaded && <ImageLoad color={color} />}
 
       <div className={cnImage('Media')}>
         <img
