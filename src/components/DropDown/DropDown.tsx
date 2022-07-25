@@ -4,34 +4,10 @@ type DropDownMenuPops = {
   items: string[]
 }
 
-const DropDownMenu: FC<DropDownMenuPops> = ({ items }) => {
-  const [itemValue, setItemValue] = useState('')
+const DropDown: FC<DropDownMenuPops> = ({ items }) => {
+  const [active, setActive] = useState(undefined)
 
-  const handleFieldChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { target } = event
-
-    setItemValue(target.value)
-  }
-
-  return (
-    <ul>
-      {items.map((item) => (
-        <li key={item}>
-          <label htmlFor={item}>
-            {item}
-            <input
-              type="radio"
-              id={item}
-              name="itemValue"
-              value={item}
-              checked={itemValue === item}
-              onChange={handleFieldChange}
-            />
-          </label>
-        </li>
-      ))}
-    </ul>
-  )
+  return <ul>Пункты меню</ul>
 }
 
-export default DropDownMenu
+export default DropDown
