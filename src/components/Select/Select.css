@@ -1,0 +1,65 @@
+.Select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  padding: 4px 8px;
+
+  background-color: #fff;
+  border: 1px solid #696969;
+  border-radius: 6px;
+}
+
+.Select:hover {
+  border-color: #1f8cb8;
+}
+
+.Select-Options {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding-top: 2px;
+  overflow: hidden;
+
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+
+  box-shadow: 0 7px 10px -2px rgba(134, 206, 235, 39%);
+}
+
+.Select-Option {
+  position: relative;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+
+  background-color: transparent;
+
+  transition: background-color 0.3s ease;
+}
+
+.Select-Option:hover {
+  background-color: #e9edf5;
+  cursor: pointer;
+}
+
+.Select-Option.Select-Option_selected {
+  background-color: #dcf1fa;
+}
+
+.Select-Chexbox {
+  display: flex;
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid #1f8cb8;
+}
+
+.Select-ChexboxIcon {
+  width: 100%;
+  height: auto;
+}

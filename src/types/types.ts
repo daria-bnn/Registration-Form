@@ -45,3 +45,7 @@ export type ImageInfo = {
   description: string | null
   color: string
 }
+
+export type TOptin = {
+    value: string
+  }

@@ -1,15 +1,33 @@
 import React from 'react'
-import './App.css'
-import DropDownMenu from './components/DropDown/DropDown'
-import Form from './components/Form/Form'
+// import Form from './components/Form/Form'
 // import ImageContainer from './components/ImageContainer/ImageContainer'
+// import Select from './components/SelectExample/Select'
 
-const App = () => (
-  <div className="App">
-    {/* <ImageContainer /> */}
-    <Form />
-    <DropDownMenu items={['Личный кабинет', 'Корзина', 'Каталог']} />
-  </div>
-)
+import './App.css'
+import Menu from './components/Menu/Menu'
+
+// const OPTIONS = [
+//   { value: 'Angular', text: 'Angular' },
+//   { value: 'React', text: 'React' },
+// ]
+
+// const App = () => {
+//   const [value, setValue] = useState<string | undefined>(undefined)
+
+//   return (
+//     <div className="App">
+//       {/* <ImageContainer />
+//     <Form /> */}
+//       <Select
+//         placeholder="Выберите..."
+//         value={value}
+//         options={OPTIONS}
+//         onChange={setValue}
+//       />
+//     </div>
+//   )
+// }
+
+const App = () => <Menu />
 
 export default App
