@@ -4,7 +4,8 @@ import React from 'react'
 // import Select from './components/SelectExample/Select'
 
 import './App.css'
-import Menu from './components/Menu/Menu'
+// import Menu from './components/Menu/Menu'
+import Search from './components/Search/Search'
 
 // const OPTIONS = [
 //   { value: 'Angular', text: 'Angular' },
@@ -28,6 +29,6 @@ import Menu from './components/Menu/Menu'
 //   )
 // }
 
-const App = () => <Menu />
+const App = () => <Search />
 
 export default App
