@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react'
 
 import SearchBar from '../SearchBar/SearchBar'
-import cnFilterPanel from './FilterPanel.classname'
+import cnFilterBlock from './FilterBlock.classname'
 
-import './FilterPanel.css'
+import './FilterBlock.css'
 
 const DATA_TAGS = [
   'h1',
@@ -33,7 +33,7 @@ const DATA_TAGS = [
   'figure',
 ]
 
-const FilterPanel: FC = () => {
+const FilterBlock: FC = () => {
   const [filter, setFilter] = useState('')
 
   const handleFilter = (filterValue: string) => {
@@ -44,12 +44,12 @@ const FilterPanel: FC = () => {
     DATA_TAGS.filter((tag) => tag.toLowerCase().includes(filter.toLowerCase()))
 
   return (
-    <div className={cnFilterPanel()}>
+    <div className={cnFilterBlock()}>
       <SearchBar onFilter={handleFilter} />
       {filter && (
-        <div className={cnFilterPanel('FilterItems')}>
+        <div className={cnFilterBlock('FilterItems')}>
           {filterTags().map((tag) => (
-            <div className={cnFilterPanel('Item')} key={tag}>
+            <div className={cnFilterBlock('Item')} key={tag}>
               {tag}
             </div>
           ))}
@@ -59,4 +59,4 @@ const FilterPanel: FC = () => {
   )
 }
 
-export default FilterPanel
+export default FilterBlock

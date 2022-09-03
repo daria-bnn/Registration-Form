@@ -5,7 +5,7 @@ import React from 'react'
 
 import './App.css'
 // import Menu from './components/Menu/Menu'
-import FilterPanel from './components/FilterPanel/FilterPanel'
+import FilterBlock from './components/filter-block/FilterBlock/FilterBlock'
 
 // const OPTIONS = [
 //   { value: 'Angular', text: 'Angular' },
@@ -31,7 +31,7 @@ import FilterPanel from './components/FilterPanel/FilterPanel'
 
 const App = () => (
   <div className="App">
-    <FilterPanel />
+    <FilterBlock />
   </div>
 )
 
