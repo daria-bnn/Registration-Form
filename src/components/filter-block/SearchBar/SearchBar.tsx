@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from 'react'
+import React, { FC, useCallback, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons'
 import debounce from 'lodash/debounce'
@@ -10,19 +10,15 @@ import './SearchBar.css'
 
 type SearchBarProps = {
   onFilter: (filterValue: string) => void
+  filter: string
 }
 
-const SearchBar: FC<SearchBarProps> = ({ onFilter }) => {
-  const [value, setValue] = useState('')
+const SearchBar: FC<SearchBarProps> = ({ onFilter, filter }) => {
   const [hints, setHints] = useState<string[]>([])
-
-  useEffect(() => {
-    onFilter(value)
-  }, [value])
 
   const handleDebounceFilter = useCallback(
     debounce((valueFilter: string) => {
-      if (valueFilter === '' || hints.includes(valueFilter)) {
+      if (hints.includes(valueFilter) || valueFilter === '') {
         return
       }
 
@@ -34,18 +30,19 @@ const SearchBar: FC<SearchBarProps> = ({ onFilter }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { target } = event
 
-    setValue(target.value)
+    onFilter(target.value)
     handleDebounceFilter(target.value)
   }
 
   const handleClear = () => {
-    setValue('')
+    onFilter('')
+    handleDebounceFilter('')
   }
 
   return (
     <div className={cnSearchBar()}>
       <label
-        className={cnSearchBar('Search', { focus: value && true })}
+        className={cnSearchBar('Search', { focus: filter && true })}
         htmlFor={cnSearchBar('Field')}
       >
         <FontAwesomeIcon
@@ -55,7 +52,7 @@ const SearchBar: FC<SearchBarProps> = ({ onFilter }) => {
         <input
           className={cnSearchBar('Field')}
           id={cnSearchBar('Field')}
-          value={value}
+          value={filter}
           placeholder="Фильтр"
           onChange={handleChange}
         />
@@ -74,7 +71,7 @@ const SearchBar: FC<SearchBarProps> = ({ onFilter }) => {
       {hints && (
         <div className={cnSearchBar('Hints')}>
           {hints.map((hint) => (
-            <SearchBarHint key={hint} hint={hint} onValueFilter={setValue} />
+            <SearchBarHint key={hint} hint={hint} onValueFilter={onFilter} />
           ))}
         </div>
       )}

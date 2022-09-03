@@ -45,7 +45,7 @@ const FilterBlock: FC = () => {
 
   return (
     <div className={cnFilterBlock()}>
-      <SearchBar onFilter={handleFilter} />
+      <SearchBar filter={filter}onFilter={handleFilter} />
       {filter && (
         <div className={cnFilterBlock('FilterItems')}>
           {filterTags().map((tag) => (
