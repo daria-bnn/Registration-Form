@@ -5,7 +5,7 @@ import React from 'react'
 
 import './App.css'
 // import Menu from './components/Menu/Menu'
-import Search from './components/Search/Search'
+import FilterPanel from './components/FilterPanel/FilterPanel'
 
 // const OPTIONS = [
 //   { value: 'Angular', text: 'Angular' },
@@ -29,6 +29,10 @@ import Search from './components/Search/Search'
 //   )
 // }
 
-const App = () => <Search />
+const App = () => (
+  <div className="App">
+    <FilterPanel />
+  </div>
+)
 
 export default App

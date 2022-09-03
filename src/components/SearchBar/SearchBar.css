@@ -1,0 +1,77 @@
+.SearchBar-Search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+
+  border-bottom: 1px transparent solid;
+
+  transition: border-bottom-color 0.3s ease;
+}
+
+.SearchBar-Search_focus {
+  border-bottom-color: #1d1d22;
+}
+
+.SearchBar-Field {
+  flex: 0 1 100%;
+
+  color: #fff;
+
+  font-size: 18px;
+  font-family: inherit;
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+
+  background-color: transparent;
+
+  border: none;
+  outline: none;
+}
+
+.SearchBar-Field::placeholder {
+  color: #414349;
+}
+
+.SearchBar-IconSearch {
+  color: #494b52;
+}
+
+.SearchBar-ButtonClear {
+  background-color: transparent;
+  border: none;
+}
+
+.SearchBar-ButtonClear:hover {
+  cursor: pointer;
+}
+
+.SearchBar-ButtonClearIcon {
+  width: 16px;
+  height: 16px;
+
+  color: #5f626b;
+}
+
+.SearchBar-Hint {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.SearchBar-Hint:hover {
+  cursor: pointer;
+}
+
+.SearchBar-HintIcon {
+  color: #5f626b;
+}
+
+.SearchBar-HintText {
+  color: #5f626b;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+}

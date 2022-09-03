@@ -1,28 +1,61 @@
 import React, { FC, useState } from 'react'
 
-type FilterPanelProps = {
-  onFilter: (filter: string) => void
-  onAddedHints: (filter: string) => void
-  filterValue: string
-}
+import SearchBar from '../SearchBar/SearchBar'
+import cnFilterPanel from './FilterPanel.classname'
 
-const FilterPanel: FC<FilterPanelProps> = ({
-  filterValue,
-  onFilter,
-  onAddedHints,
-}) => {
-  const [value, setValue] = useState('')
+import './FilterPanel.css'
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { target } = event
+const DATA_TAGS = [
+  'h1',
+  'p',
+  'div',
+  'main',
+  'footer',
+  'section',
+  'button',
+  'input',
+  'form',
+  'option',
+  'select',
+  'br',
+  'address',
+  'body',
+  'article',
+  'img',
+  'label',
+  'picture',
+  'span',
+  'textarea',
+  'video',
+  'ul',
+  'li',
+  'head',
+  'figure',
+]
 
-    setValue(target.value)
-    onFilter(target.value)
-    onAddedHints(target.value)
+const FilterPanel: FC = () => {
+  const [filter, setFilter] = useState('')
+
+  const handleFilter = (filterValue: string) => {
+    setFilter(filterValue)
   }
 
+  const filterTags = (): string[] =>
+    DATA_TAGS.filter((tag) => tag.toLowerCase().includes(filter.toLowerCase()))
+
   return (
-    <input type="text" value={filterValue || value} onChange={handleChange} />
+    <div className={cnFilterPanel()}>
+      <SearchBar onFilter={handleFilter} />
+      {filter && (
+        <div className={cnFilterPanel('FilterItems')}>
+          {filterTags().map((tag) => (
+            <div className={cnFilterPanel('Item')} key={tag}>
+              {tag}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 
