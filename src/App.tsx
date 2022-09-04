@@ -6,6 +6,7 @@ import React from 'react'
 import './App.css'
 // import Menu from './components/Menu/Menu'
 import FilterBlock from './components/filter-block/FilterBlock/FilterBlock'
+import PixelForm from './components/pixel-form/PixelForm/PixelForm/PixelForm'
 
 // const OPTIONS = [
 //   { value: 'Angular', text: 'Angular' },
@@ -32,6 +33,7 @@ import FilterBlock from './components/filter-block/FilterBlock/FilterBlock'
 const App = () => (
   <div className="App">
     <FilterBlock />
+    <PixelForm />
   </div>
 )
 
