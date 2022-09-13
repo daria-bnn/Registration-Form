@@ -10,7 +10,7 @@ import FilterBlock from './components/filter-block/FilterBlock/FilterBlock'
 import PixelForm from './components/pixel-form/PixelForm/PixelForm/PixelForm'
 
 import './App.css'
-import ScalableBlock from './components/scalable-block/ScalableBlock/ScalableBlock'
+import ScalableBlock from './components/ScalableBlock/ScalableBlock'
 // const OPTIONS = [
 //   { value: 'Angular', text: 'Angular' },
 //   { value: 'React', text: 'React' },
