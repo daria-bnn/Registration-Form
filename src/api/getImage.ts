@@ -1,6 +1,6 @@
 import { ImageType } from '../types/types'
 
-const USER_KEY = 'M-zBOyY9k9PS7QJr5XbWJZZrNpSGMG5P1KxKlAgakZQ'
+const USER_KEY = process.env.REACT_APP_UNPLASH_API_KEY
 const URL = `https://api.unsplash.com/photos/random?client_id=${USER_KEY}`
 
 const getImage = (): Promise<ImageType> =>
