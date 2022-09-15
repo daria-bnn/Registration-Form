@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-import { TOptin } from '../../types/types'
+import { TOptin } from '../../../types/types'
 import SelectOption from './SelectOption/SelectOption'
 
 import './Select.css'
@@ -35,8 +35,8 @@ const Select: FC<SelectProps> = ({ placeholder, value, options, onChange }) => {
   }
 
   return (
-    <>
-      <button type="button" onClick={handleClick} className={cnSelect()}>
+    <div className={cnSelect()}>
+      <button type="button" onClick={handleClick} className={cnSelect('Button')}>
         {selectLabel}
         {isVisible ? (
           <FontAwesomeIcon icon={faXmark} />
@@ -56,7 +56,7 @@ const Select: FC<SelectProps> = ({ placeholder, value, options, onChange }) => {
           ))}
         </div>
       )}
-    </>
+    </div>
   )
 }
 

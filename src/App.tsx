@@ -12,33 +12,19 @@ import PixelForm from './components/PixelForm/PixelForm'
 import './App.css'
 import ScalableBlock from './components/ScalableBlock/ScalableBlock'
 import RandomImage from './components/random-image/RandomImage/RandomImage'
+import Menu from './components/drop-down-menu/Menu/Menu'
+import Select from './components/drop-down-menu/Select/Select'
 // const OPTIONS = [
 //   { value: 'Angular', text: 'Angular' },
 //   { value: 'React', text: 'React' },
 // ]
 
-// const App = () => {
-//   const [value, setValue] = useState<string | undefined>(undefined)
-
-//   return (
-//     <div className="App">
-//       {/* <ImageContainer />
-//     <Form /> */}
-//       <Select
-//         placeholder="Выберите..."
-//         value={value}
-//         options={OPTIONS}
-//         onChange={setValue}
-//       />
-//     </div>
-//   )
-// }
-
 const App = () => (
   <div className={cnApp()}>
+    <RandomImage />
+    <Menu />
     <FilterBlock />
     <PixelForm />
-    <RandomImage />
     <ScalableBlock classname={cnApp('ScalableBlock')} />
   </div>
 )

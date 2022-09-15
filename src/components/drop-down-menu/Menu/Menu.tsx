@@ -22,7 +22,7 @@ const Menu: FC = () => {
 
   return (
     <div className={cnMenu()}>
-      <p>Выпадающее меню</p>
+      <h2 className={cnMenu('Title')}>Выпадающее меню</h2>
       <Select
         placeholder="Выбор языка..."
         value={value}

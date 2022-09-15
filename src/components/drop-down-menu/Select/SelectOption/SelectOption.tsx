@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
-import { TOptin } from '../../../types/types'
+import { TOptin } from '../../../../types/types'
 import cnSelect from '../Select.classname'
 
 import '../Select.css'
