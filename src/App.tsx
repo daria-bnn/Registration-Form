@@ -6,11 +6,12 @@ import React from 'react'
 
 // import Menu from './components/Menu/Menu'
 import cnApp from './App.classname'
-import FilterBlock from './components/filter-block/FilterBlock/FilterBlock'
+import FilterBlock from './components/search-and-filter/FilterBlock/FilterBlock'
 import PixelForm from './components/PixelForm/PixelForm'
 
 import './App.css'
 import ScalableBlock from './components/ScalableBlock/ScalableBlock'
+import RandomImage from './components/random-image/RandomImage/RandomImage'
 // const OPTIONS = [
 //   { value: 'Angular', text: 'Angular' },
 //   { value: 'React', text: 'React' },
@@ -37,6 +38,7 @@ const App = () => (
   <div className={cnApp()}>
     <FilterBlock />
     <PixelForm />
+    <RandomImage />
     <ScalableBlock classname={cnApp('ScalableBlock')} />
   </div>
 )

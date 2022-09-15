@@ -1,28 +1,28 @@
-import { cn } from '@bem-react/classname'
 import { FC, useState } from 'react'
+import { cn } from '@bem-react/classname'
 
 import { ImageInfo } from '../../../types/types'
+import ImageLoad from '../Loading/Loading'
 
-import './Image.css'
-import ImageLoad from './ImageLoad/ImageLoad'
+import './Picture.css'
 
-const cnImage = cn('Image')
+const cnPicture = cn('Picture')
 
-const Image: FC<ImageInfo> = ({ url, description, color }) => {
+const Picture: FC<ImageInfo> = ({ url, description, color }) => {
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false)
 
   const handleLoad = () => setIsImageLoaded(true)
 
   return (
-    <div className={cnImage()}>
+    <div className={cnPicture()}>
       {!isImageLoaded && <ImageLoad color={color} />}
 
-      <div className={cnImage('Media')}>
+      <div className={cnPicture('Media')}>
         <img
           className={
             isImageLoaded
-              ? cnImage('Media')
-              : cnImage('Media', { hidden: true })
+              ? cnPicture('Media')
+              : cnPicture('Media')
           }
           src={url}
           alt={description !== null ? description : 'image'}
@@ -33,4 +33,4 @@ const Image: FC<ImageInfo> = ({ url, description, color }) => {
   )
 }
 
-export default Image
+export default Picture

@@ -1,15 +1,15 @@
 import React, { FC, useEffect, useState } from 'react'
 import { cn } from '@bem-react/classname'
 
-import './ImageContainer.css'
+import getImage from '../../../api/getImage'
+import Picture from '../Picture/Picture'
+import { ImageType } from '../../../types/types'
 
-import getImage from '../../api/getImage'
-import Image from './Image/Image'
-import { ImageType } from '../../types/types'
+import './RandomImage.css'
 
-const cnImageContainer = cn('ImageContainer')
+const cnRandomImage = cn('RandomImage')
 
-const ImageContainer: FC = () => {
+const RandomImage: FC = () => {
   const [imageRandom, setImageRandom] = useState<ImageType>()
 
   useEffect(() => {
@@ -19,10 +19,10 @@ const ImageContainer: FC = () => {
   }, [])
 
   return (
-    <div className={cnImageContainer()}>
+    <div className={cnRandomImage()}>
       <h2>Случайная картинка</h2>
       {imageRandom && (
-        <Image
+        <Picture
           url={imageRandom.urls.small}
           description={imageRandom.description}
           color={imageRandom.color}
@@ -31,4 +31,4 @@ const ImageContainer: FC = () => {
     </div>
   )
 }
-export default ImageContainer
+export default RandomImage
