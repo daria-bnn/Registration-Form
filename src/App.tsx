@@ -7,7 +7,7 @@ import React from 'react'
 // import Menu from './components/Menu/Menu'
 import cnApp from './App.classname'
 import FilterBlock from './components/filter-block/FilterBlock/FilterBlock'
-import PixelForm from './components/pixel-form/PixelForm/PixelForm/PixelForm'
+import PixelForm from './components/PixelForm/PixelForm'
 
 import './App.css'
 import ScalableBlock from './components/ScalableBlock/ScalableBlock'
@@ -35,8 +35,8 @@ import ScalableBlock from './components/ScalableBlock/ScalableBlock'
 
 const App = () => (
   <div className={cnApp()}>
-    {/* <FilterBlock />
-    <PixelForm /> */}
+    <FilterBlock />
+    <PixelForm />
     <ScalableBlock classname={cnApp('ScalableBlock')} />
   </div>
 )

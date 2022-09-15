@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react'
 
-import createImage from '../../utils/createImage'
-import downloadImage from '../../utils/downloadImage'
+import createImage from './utils/createImage'
+import downloadImage from './utils/downloadImage'
 import cnPixelForm from './PixelForm.classname'
 
 import './PixelForm.css'
