@@ -1,0 +1,21 @@
+.FormMaterial {
+  padding: 32px;
+
+  background-color: #f8ffff;
+
+  border-radius: 24px;
+}
+
+.FormMaterial-Title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 32px;
+
+  color: #836fa9;
+}
+
+.FormMaterial-Form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
