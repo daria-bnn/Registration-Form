@@ -136,14 +136,17 @@ const ScalableBlock: FC<ScalableBlockProps> = ({ classname }) => {
   }, [isResizing])
 
   return (
-    <div
-      onMouseDown={handleMouseDown}
-      aria-label="scale-block"
-      role="button"
-      tabIndex={0}
-      ref={refBlock}
-      className={cnScalableBlock(null, [classname])}
-    />
+    <div className={cnScalableBlock()}>
+      <div className={cnScalableBlock('Title')}>Стречинг</div>
+      <div
+        onMouseDown={handleMouseDown}
+        aria-label="scale-block"
+        role="button"
+        tabIndex={0}
+        ref={refBlock}
+        className={cnScalableBlock('Block', [classname])}
+      />
+    </div>
   )
 }
 

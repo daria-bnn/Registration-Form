@@ -22,10 +22,10 @@ import FormMaterial from './components/FormMaterial/FormMaterial'
 const App = () => (
   <div className={cnApp()}>
     {/* <RandomImage /> */}
+    <ScalableBlock classname={cnApp('ScalableBlock')} />
     <Menu />
     <FilterBlock />
     <PixelForm />
-    <ScalableBlock classname={cnApp('ScalableBlock')} />
     <FormMaterial />
   </div>
 )
