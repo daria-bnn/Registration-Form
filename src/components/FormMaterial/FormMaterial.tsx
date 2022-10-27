@@ -39,8 +39,7 @@ const FormMaterial: FC = () => {
     mode: 'onTouched',
   })
 
-  const onSubmit: SubmitHandler<TDataUser> = (data) => {
-    console.log(data)
+  const onSubmit: SubmitHandler<TDataUser> = () => {
     reset()
   }
 
