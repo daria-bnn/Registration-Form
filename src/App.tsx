@@ -1,8 +1,14 @@
-import React from "react";
-import "./App.css";
+import React from 'react'
 
-function App() {
-  return <div className="App" />;
-}
+import cnApp from './App.classname'
+import FormMaterial from './components/FormMaterial/FormMaterial'
 
-export default App;
+import './App.css'
+
+const App = () => (
+  <div className={cnApp()}>
+    <FormMaterial />
+  </div>
+)
+
+export default App
