@@ -23,6 +23,8 @@
 > - [React Hook Form](https://react-hook-form.com/)
 > - CSS
 
+## Особенности
+Проект заплоен на [GitHub Pages](https://pages.github.com/) с использованием инструментов CI/CD (GitHub Actions Workflow)
 
 ## Как запустить проект
 
